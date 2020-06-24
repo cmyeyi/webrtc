@@ -111,6 +111,7 @@ class MediaCodecVideoDecoderFactory implements VideoDecoderFactory {
   // Returns true if the given MediaCodecInfo indicates a supported encoder for the given type.
   private boolean isSupportedCodec(MediaCodecInfo info, VideoCodecMimeType type) {
     String name = info.getName();
+    Logging.e("HHHHHHHHHH","[MediaCodecVideoDecoderFactory] isSupportedCodec , name = " + name);
     if (!MediaCodecUtils.codecSupportsType(info, type)) {
       return false;
     }
