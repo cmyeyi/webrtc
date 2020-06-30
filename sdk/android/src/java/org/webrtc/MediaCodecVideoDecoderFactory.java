@@ -111,7 +111,6 @@ class MediaCodecVideoDecoderFactory implements VideoDecoderFactory {
   // Returns true if the given MediaCodecInfo indicates a supported encoder for the given type.
   private boolean isSupportedCodec(MediaCodecInfo info, VideoCodecMimeType type) {
     String name = info.getName();
-    Logging.e("HHHHHHHHHH","[MediaCodecVideoDecoderFactory] isSupportedCodec , name = " + name);
     if (!MediaCodecUtils.codecSupportsType(info, type)) {
       return false;
     }
@@ -121,7 +120,8 @@ class MediaCodecVideoDecoderFactory implements VideoDecoderFactory {
         == null) {
       return false;
     }
-    return isCodecAllowed(info);
+//    return isCodecAllowed(info);
+    return true;
   }
 
   private boolean isCodecAllowed(MediaCodecInfo info) {
@@ -141,6 +141,6 @@ class MediaCodecVideoDecoderFactory implements VideoDecoderFactory {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && name.startsWith(EXYNOS_PREFIX)) {
       return true;
     }
-    return false;
+    return true;
   }
 }

@@ -24,12 +24,13 @@ class MediaCodecUtils {
   private static final String TAG = "MediaCodecUtils";
 
   // Prefixes for supported hardware encoder/decoder component names.
+  static final String HISI_PREFIX = "OMX.hisi.";
   static final String MTK_PREFIX = "OMX.MTK.";
   static final String EXYNOS_PREFIX = "OMX.Exynos.";
   static final String INTEL_PREFIX = "OMX.Intel.";
   static final String NVIDIA_PREFIX = "OMX.Nvidia.";
   static final String QCOM_PREFIX = "OMX.qcom.";
-  static final String[] SOFTWARE_IMPLEMENTATION_PREFIXES = {"OMX.google.", "OMX.SEC.", MTK_PREFIX, QCOM_PREFIX};
+  static final String[] SOFTWARE_IMPLEMENTATION_PREFIXES = {"OMX.google.", "OMX.SEC."};
 
   // NV12 color format supported by QCOM codec, but not declared in MediaCodec -
   // see /hardware/qcom/media/mm-core/inc/OMX_QCOMExtns.h
